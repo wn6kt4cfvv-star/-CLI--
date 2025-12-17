@@ -41,3 +41,28 @@
 
 ```bash
 python src/config_tool.py --input examples/network.cfg --output out.json
+
+Примеры
+Сетевая конфигурация
+
+port <- 8080;
+replicas <- { 1 . 2 . 3 };
+main_port <- @(port);
+
+Результат:
+
+{
+  "port": 8080,
+  "replicas": [1, 2, 3],
+  "main_port": 8080
+}
+
+Структура проекта
+
+    src/ — исходный код
+
+    examples/ — примеры конфигураций
+
+    tests/ — тестовые конфигурации
+
+    docs/ — документация
